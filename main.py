@@ -65,12 +65,9 @@ class NitroGen:  # Initialise the class
         # Print who developed the code
         self.slowType("Made by: Drillenissen#4268 && Benz#7274", .02)
         time.sleep(1)  # Wait a little more
-        # Print the first question
-        self.slowType(
-            "\nInput How Many Codes to Generate and Check: ", .02, newLine=False)
             
         # number of codes to generate
-        num = 1000000000  # Ask the user for the amount of codes
+        num = 1000000  # Ask the user for the amount of codes
 
         if USE_WEBHOOK:
             # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
