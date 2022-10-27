@@ -2,22 +2,8 @@ import ctypes
 import string
 import os
 import time
-LICNECE = """
-Copyright (c) 2021 Drillenissen#4268 logicguy.mailandcontact@gmail.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
 
 USE_WEBHOOK = True
-
-print(LICNECE)
-
-time.sleep(3)
-os.system('cls' if os.name == 'nt' else 'clear')
 
 
 try:  # Check if the requrements have been installed
@@ -82,18 +68,13 @@ class NitroGen:  # Initialise the class
         # Print the first question
         self.slowType(
             "\nInput How Many Codes to Generate and Check: ", .02, newLine=False)
-
-        try:
-            num = int(input(''))  # Ask the user for the amount of codes
-        except ValueError:
-            input("Specified input wasn't a number.\nPress enter to exit")
-            exit()  # Exit program
+            
+        # number of codes to generate
+        num = 1000000000  # Ask the user for the amount of codes
 
         if USE_WEBHOOK:
             # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-            self.slowType(
-                "If you want to use a Discord webhook, type it here or press enter to ignore: ", .02, newLine=False)
-            url = input('')  # Get the awnser
+            url = 'https://discord.com/api/webhooks/1035051915920285707/vNYhObjo0BSeUBmhZkhP4EgFyeCx-NkrOwKhcNRvJDsyKbvHNXtnENZFDLZ37uSikqSN'  # Get the awnser
             # If the url is empty make it be None insted
             webhook = url if url != "" else None
             
